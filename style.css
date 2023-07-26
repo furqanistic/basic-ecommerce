@@ -1,0 +1,565 @@
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: 0;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  background-color: black;
+}
+.nav-top {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: rgb(42, 41, 41);
+  padding: 10px;
+  border-radius: 30px;
+}
+.searchHere {
+  outline: none;
+  border: none;
+  font-size: 18px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+.searchHere::placeholder {
+  color: white;
+}
+.fa-magnifying-glass {
+  margin-left: 10px;
+  padding: 0.3rem;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.offerTitle {
+  display: flex;
+  align-items: center;
+}
+.logoName {
+  font-size: 30px;
+}
+.offerText {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 100;
+}
+.nav-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 0px;
+}
+.menuItems {
+  color: white;
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.slider {
+  overflow: hidden;
+  background-image: url('./img/bg.jpg');
+  clip-path: polygon(0 0, 100% 0, 10 0% 100%, 0 85%);
+}
+.silderWrapper {
+  width: 500vw;
+  height: 100%;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  transition: all 1s ease-in-out;
+}
+.slideData {
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sliderImg {
+  margin-top: 3%;
+  margin-left: 5%;
+  z-index: 1;
+}
+.sliderTitle {
+  position: absolute;
+  font-size: 80px;
+  right: 10%;
+  top: 15%;
+  color: white;
+  text-align: center;
+}
+.buyBtn {
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  color: rgb(255, 0, 0);
+  background-color: white;
+  font-weight: 800;
+  border-radius: 30px;
+  position: absolute;
+  font-size: 30px;
+  right: 14%;
+  bottom: 35%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 1;
+}
+.buyBtn:hover {
+  scale: 1.1;
+  border: 0.5px solid white;
+  z-index: 1;
+}
+.bgArt {
+  background-color: red;
+  height: 750px;
+  width: 750px;
+  position: absolute;
+  border-radius: 50%;
+}
+.priceTag {
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  font-size: 50px;
+}
+.slideData:nth-child(1) .bgArt {
+  background-color: rgb(255, 0, 0);
+}
+.slideData:nth-child(2) .bgArt {
+  background-color: rgb(165, 221, 10);
+}
+.slideData:nth-child(3) .bgArt {
+  background-color: rgb(255, 0, 153);
+}
+.slideData:nth-child(4) .bgArt {
+  background-color: rgb(255, 115, 0);
+}
+.slideData:nth-child(5) .bgArt {
+  background-color: rgb(26, 108, 3);
+}
+.slideData:nth-child(1) .buyBtn {
+  color: rgb(255, 0, 0);
+}
+.slideData:nth-child(2) .buyBtn {
+  color: rgb(165, 221, 10);
+}
+.slideData:nth-child(3) .buyBtn {
+  color: rgb(255, 0, 153);
+}
+.slideData:nth-child(4) .buyBtn {
+  color: rgb(255, 115, 0);
+}
+.slideData:nth-child(5) .buyBtn {
+  color: rgb(26, 108, 3);
+}
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+}
+.productImg {
+  width: 50%;
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productTitle {
+  font-size: 75px;
+  font-weight: 900;
+}
+
+.productDesc {
+  font-style: 24px;
+  color: gray;
+}
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.color:last-child {
+  background-color: darkblue;
+}
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
+}
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+.galleryImg {
+  width: 100%;
+}
+
+.newSeason {
+  display: flex;
+}
+
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nsImg {
+  width: 100%;
+  height: 500px;
+}
+
+.nsTitle {
+  font-size: 40px;
+}
+
+.nsButton {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+}
+
+.footerLeft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fMenuTitle {
+  font-size: 16px;
+}
+
+.fList {
+  padding: 0;
+  list-style: none;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  padding: 5px;
+}
+
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.fIcons {
+  display: flex;
+}
+
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 20px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .navBottom {
+    flex-wrap: wrap;
+  }
+
+  .menuItem {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .slider {
+    clip-path: none;
+  }
+
+  .sliderImg {
+    width: 90%;
+  }
+
+  .sliderBg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sliderTitle {
+    display: none;
+  }
+
+  .sliderPrice {
+    top: unset;
+    bottom: -50;
+    left: 0;
+    background-color: lightgrey;
+  }
+
+  .buyButton {
+    right: 0;
+    top: 0;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .product {
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productImg {
+    width: 80%;
+  }
+
+  .productDetails {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 0;
+  }
+
+  .productTitle {
+    font-size: 50px;
+    margin: 0;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .newSeason {
+    flex-direction: column;
+  }
+
+  .nsItem:nth-child(2) {
+    padding: 50px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerLeft {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .footerRight {
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+
+  .payment {
+    width: 90%;
+    padding: 20px;
+  }
+}
+.payTitle {
+  font-size: 20px;
+  color: lightgray;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.payInput {
+  padding: 10px;
+  margin: 10px 0px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder {
+  color: rgb(163, 163, 163);
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  margin-right: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40;
+  width: 100%;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+  background-color: #369e62;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
